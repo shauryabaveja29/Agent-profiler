@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+  
+</head>
+<body>
+	<center><b><font size="5"><h1 style="background-color:DodgerBlue;color:White;">AGENT PRE-SCREENING QUESTIONNAIRE</h1></font></b></center>
+	
+<div> 
+ <form action="/predict" method="POST"> 
+	
+ <label for= "  Gender  " >  Gender  </label>
+	 <select id= "  Gender  " name= "  Gender  " >
+	 <option value= " Male " > Male </option> 
+         <option value= " Female " > Female </option> 
+         </select>
+      &nbsp &nbsp &nbsp &nbsp
+  
+ <label for= " Age Bracket " > Age </label>
+	 <select id= " Age Bracket " name= " Age Bracket " >
+	<option value= " <30 " > <30 </option>
+        <option value= " 31-40 " > 31-40 </option>
+        <option value= " 41-50 " > 41-50 </option>
+        <option value= " >50 " > >50 </option> 
+        </select>
+  &nbsp &nbsp &nbsp &nbsp
+
+ <label for= "  Age when insurance started Bracket  " >  Agent's age when he/she started working in insurance industry  </label>
+	 <select id= "  Age when insurance started Bracket  " name= "  Age when insurance started Bracket  " >
+	 <option value= " 18-20 " > 18-20 </option>
+         <option value= " 21-25 " > 21-25 </option> 
+         <option value= " 26-30 " > 26-30 </option>
+         <option value= " 31-35 " > 31-35 </option>
+         <option value= " >35  " > >35 </option>
+         </select>
+
+   <br><br>
+
+ <label for= "  Education Level	  " >  Education   </label>
+	 <select id= "  Education Level	  " name= "  Education Level " >
+	 <option value= " UG " > Undergraduate (12th Pass) </option>     
+         <option value= " Grad " > Graduate </option>     
+         <option value= " PG " > Post Graduate </option>  
+         <option value= " CA " > Chartered Accountant </option>  
+         </select>
+  &nbsp &nbsp &nbsp 
+ <label for= " Industry Experience bucket " >  Industry Experience   </label>
+	 <select id= "  Industry Experience bucket  " name= "  Industry Experience bucket  " >
+	 <option value= " <10 " > <10 </option> 
+         <option value= " >10 " > >10 </option> 
+         </select>
+
+  &nbsp &nbsp &nbsp 
+
+ <label for= "  Other Family Member Involved  " >  Other Family Member Involved  </label>
+	 <select id= "  Other Family Member Involved  " name= "  Other Family Member Involved  " >
+	 <option value= " Yes " > Yes </option>
+	 <option value= " No " > No </option> 
+         </select>
+<br>
+<br><br>
+	<button type="submit" class="btn">Predict</button>
+<br><br>
+</form> 
+
+</div> 
+{{prediction}}
+</body>
+</html>
+
+
+
